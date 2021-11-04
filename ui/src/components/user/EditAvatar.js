@@ -46,7 +46,7 @@ const EditAvatar = () => {
   };
 
   const avatarImage = () => {
-    if (user.avatar) return <img className="upload-image" src={`http://localhost:8000/image/${user.avatar}`} alt="avatar" />
+    if (user.avatar) return <img className="upload-image" src={`https://leeminhung.space:8000/image/${user.avatar}`} alt="avatar" />
     return <div className="empty-image" />
   }
 
