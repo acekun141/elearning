@@ -221,7 +221,7 @@ def view_preview_video(preview_id):
 def view_video(user, video_id):
     video = Video.query.filter_by(id=video_id).first()
     if video:
-        transaction = Transaction.query.filter_by(user_id=user.id, course_id=video.course_id).first()
+        transaction = Transaction.query.filter_by(user_id=user.id, course_id=video.chapter.course_id).first()
         if not transaction:
             return {"error": "Not found"}, 400
         path = os.path.join(BASE_DIR, 'videos', video.filename, 'dash.mpd')
