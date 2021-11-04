@@ -8,6 +8,8 @@ RUN pip install -r requirement.txt
 
 RUN apt-get update && apt-get -y install default-mysql-client
 
+RUN apt install ffmpeg
+
 ENV FLASK_APP=api
 
 RUN ls -lh
