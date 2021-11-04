@@ -229,7 +229,7 @@ def view_video(user, video_id):
     param_id = request.args.get('videoid', None)
     if param_id:
         video = Video.query.filter_by(id=param_id).first()
-        transaction = Transaction.query.filter_by(user_id=user.id, course_id=video.course_id).first()
+        transaction = Transaction.query.filter_by(user_id=user.id, course_id=video.chapter.course_id).first()
         if not transaction:
             return {"error": "Not found"}, 400
         path = os.path.join(BASE_DIR, 'videos', video.filename, video_id)
