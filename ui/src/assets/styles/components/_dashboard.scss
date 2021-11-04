@@ -1,0 +1,50 @@
+.dashboard__header {
+  gap: var(--space-md);
+}
+.dashboard-admin {
+  .chart {
+    margin-top: var(--space-md);
+    canvas {
+      height: 700px !important;
+    }
+  }
+}
+.income, .user-board {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__header {
+    h4 {
+      font-weight: 700 !important;
+    }
+  }
+  &__buttons {
+    button {
+      border: 1px solid var(--color-text);
+      border-radius: 8px;
+      margin-right: 5px;
+      font-size: var(--font-s);
+      &.active {
+        background-color: var(--color-text);
+        color: var(--color-white);
+      }
+    }
+  }
+  &__content {
+    margin-top: var(--space-lg);
+    .currency {
+      font-weight: bold;
+      color: var(--color-gray-2);
+      margin: 0;
+    }
+    .value {
+      font-size: var(--font-xl);
+      font-weight: bolder;
+      margin: 0;
+    }
+    .icon {
+      font-size: var(--font-xl);
+    }
+  }
+}

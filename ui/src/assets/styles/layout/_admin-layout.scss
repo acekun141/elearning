@@ -1,0 +1,15 @@
+.admin-layout {
+  display: flex;
+  height: 100vh;
+  .sidebar {
+    width: 350px;
+  }
+  .content {
+    padding: var(--space-xl);
+    height: 100%;
+    overflow-y: auto;
+    .content-title {
+      font-weight: 700;
+    }
+  }
+}

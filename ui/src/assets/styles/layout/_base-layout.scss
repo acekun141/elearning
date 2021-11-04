@@ -1,0 +1,43 @@
+.container-fluid {
+  padding: 0;
+  background-color: transparent;
+}
+
+#root, body {
+  background-color: transparent;
+}
+
+html {
+  background-color: var(--color-gray-0);
+}
+
+.card {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  border: 0;
+}
+
+form {
+  .title {
+    font-weight: bolder;
+    margin-bottom: var(--space-lg);
+  }
+  button {
+    &.action {
+      color: var(--color-secondary);
+      background-color: transparent;
+      border:0;
+      outline: 0;
+      display: inline-block;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.layout {
+  .content {
+    margin-top: var(--space-md);
+  }
+}

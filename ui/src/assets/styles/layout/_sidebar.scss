@@ -1,0 +1,66 @@
+.sidebar {
+  height: 100vh;
+  background-color: var(--color-white);
+  padding: var(--space-md) var(--space-lg);
+  overflow-y: auto;
+  overflow-x: hidden;
+  &__top, &__bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    padding: var(--space-md) 0;
+    .user-avatar {
+      height: 50px; 
+      width: 50px;
+      border-radius: 16px;
+      margin-right: var(--space-md);
+    }
+    p {
+      margin: 0;
+      font-weight: 700;
+      font-size: var(--font-l);
+    }
+  }
+  .btn {
+    border-radius: 16px;
+    padding: var(--space-sm);
+    margin-top: 5px;
+  }
+  &__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--color-gray-2);
+    padding: var(--space-sm);
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 5px;
+    border-radius: 16px;
+    svg {
+      font-size: var(--font-xl);
+      color: var(--color-gray-2);
+      margin-right: var(--space-sm);
+      font-weight: 700;
+      * {
+        stroke-width: 50;
+      }
+    }
+    &:hover {
+      background-color: var(--color-gray-0);
+      color: var(--color-text);
+      svg {
+        color: var(--color-text);
+      }
+    }
+    &.active {
+      background-color: var(--color-gray-1);
+      color: var(--color-text);
+      svg {
+        color: var(--color-text);
+      }
+    }
+  }
+}

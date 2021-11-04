@@ -1,0 +1,29 @@
+.teacher-detail {
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__avatar {
+      height: 200px;
+      width: 200px;
+      overflow: hidden;
+      border-radius: 50%;
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    p {
+      margin-top: var(--space-lg);
+      font-size: var(--font-l);
+      font-weight: 700;
+    }
+  }
+  .describe {
+    margin-top: var(--space-xxl);
+    margin-bottom: var(--space-xxl);
+  }
+  h5 {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,42 @@
+version: "3.3"
+services:
+  mysql:
+    container_name: mysql
+    image: mysql
+    cap_add:
+      - SYS_NICE  # CAP_SYS_NICE
+    env_file: .env.mysql
+    restart: always
+  redis:
+    container_name: redis
+    image: redis
+    restart: always
+  api:
+    container_name: flask_api
+    build: ./api
+    links:
+      - mysql
+      - redis
+    depends_on:
+      - mysql
+      - redis
+    env_file: .env.api
+    restart: always
+  ui:
+    container_name: ui
+    build: ./ui
+  nginx:
+    container_name: nginx_server
+    image: nginx:latest
+    depends_on:
+      - api
+      - ui
+    links:
+      - api
+      - ui
+    volumes:
+      - ./nginx:/etc/nginx/conf.d/
+    restart: always
+    ports:
+      - "80:80"
+      - "8000:8000"

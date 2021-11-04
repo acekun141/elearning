@@ -1,0 +1,40 @@
+@keyframes countdown {
+  from { width: 100%; }
+  to { width: 0px; }
+}
+
+.alert-wrapper {
+  position: absolute;
+  width: 350px;
+  right: 1rem;
+  top: 1rem;
+  z-index: 9999;
+  .alert {
+    width: 100%;
+    border-radius: 16px;
+    background-color: rgba($color: #23fb23, $alpha: 0.5);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: var(--font-s);
+    position: relative;
+    padding: var(--space-lg) var(--space-md);
+    overflow: hidden;
+    border: 0;
+    backdrop-filter: blur(5px);
+    font-weight: bold;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      background-color: white;
+      left: 0;
+      bottom: 0;
+      opacity: 0.7;
+      animation: countdown 3s linear infinite;
+    }
+    &.error {
+      background-color: rgba($color: rgb(250, 43, 43), $alpha: 0.5);
+    }
+  }
+}
