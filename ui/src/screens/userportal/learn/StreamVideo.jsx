@@ -5,7 +5,7 @@ const StreamVideo = ({ video: data }) => {
 
   useEffect(() => {
     if (!data) return null;
-    var video, player, url = `https://leeminhung.space:8000/chapter/view-admin-video/${data.id}`;
+    var video, player, url = `https://leeminhung.space/api/chapter/view-admin-video/${data.id}`;
     video = document.getElementById('videoPlayer');
     player = dashjs.MediaPlayer().create();
     player.extend("RequestModifier", function () {

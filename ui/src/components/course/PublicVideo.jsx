@@ -5,7 +5,7 @@ const PublicVideo = ({ video_id }) => {
 
   useEffect(() => {
     if (!video_id) return null;
-    var video, player, url = `https://leeminhung.space:8000/chapter/view-preview/${video_id}`;
+    var video, player, url = `https://leeminhung.space/api/chapter/view-preview/${video_id}`;
     video = document.getElementById('videoPlayer');
     player = dashjs.MediaPlayer().create();
     player.extend("RequestModifier", function () {
