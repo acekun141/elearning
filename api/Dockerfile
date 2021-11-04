@@ -3,8 +3,9 @@ WORKDIR /code
 
 ADD main.py config.py requirement.txt wait.sh start.sh /code/
 ADD api /code/api/
-ADD videos /code/videos/
-ADD images /code/images/
+
+RUN mkdir videos
+RUN mkdir images
 
 RUN pip install -r requirement.txt
 
