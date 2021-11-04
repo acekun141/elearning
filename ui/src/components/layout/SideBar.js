@@ -34,7 +34,7 @@ const SideBar = () => {
       <div className="sidebar__top">
         <div className="sidebar__user">
           {user.avatar ? (
-            <img className="user-avatar" src={`/image/${user.avatar}`} />
+            <img className="user-avatar" src={`/api/image/${user.avatar}`} />
           ) : (
             <div className="user-shortname text-uppercase">{shortName}</div>
           )}

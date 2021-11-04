@@ -48,7 +48,7 @@ const Course = ({ data, itemId }) => {
   return (
     <div className="course-item" tabIndex={0}>
       <div className="course-item__cover-wrapper">
-        <img src={`/image/${data.cover}`} alt="cover" />
+        <img src={`/api/image/${data.cover}`} alt="cover" />
       </div>
       <div className="course-item__content">
         <p className="course-item__name" onClick={() => goToCourse(data.id)}>{data.name}</p>
@@ -58,7 +58,7 @@ const Course = ({ data, itemId }) => {
           <p>{`(${data.rate_detail['total']} rate${data.rate_detail['total'] > 1 ? 's' : ''})`}</p>
         </div>
         <div className="course-item__user" onClick={() => history.push(`/teacher/${data.create_by_id}`)}>
-          <img src={`/image/${data.user_avatar}`} alt="avatar" />
+          <img src={`/api/image/${data.user_avatar}`} alt="avatar" />
           <p className="course-item__user">{data.create_by}</p>
         </div>
         <div className="course-item__price">

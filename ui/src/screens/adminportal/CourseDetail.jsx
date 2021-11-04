@@ -143,7 +143,7 @@ const CourseDetail = () => {
       />
       <div className="admin-course-detail">
         <div className="admin-course-detail__cover-wrapper">
-          <img src={`/image/${course.cover}`} alt="cover" />
+          <img src={`/api/image/${course.cover}`} alt="cover" />
         </div>
         <div className="admin-course-detail__content">
           <div className="admin-course-detail__name">
@@ -166,7 +166,7 @@ const CourseDetail = () => {
           </div>
           <p className="admin-course-detail__category">{course.course_type}</p>
           <div className="admin-course-detail__user">
-            <img src={`/image/${course.user_avatar}`} alt="avatar" />
+            <img src={`/api/image/${course.user_avatar}`} alt="avatar" />
             <p>{course.create_by}</p>
           </div>
           <p className="admin-course-detail__create_at">
@@ -196,7 +196,7 @@ const CourseDetail = () => {
 						/>
 						{course.preview ? (
 							<div className="preview-card">
-								<img src={`/image/${course.cover}`} alt="course-detail" />
+								<img src={`/api/image/${course.cover}`} alt="course-detail" />
 								<button onClick={() => setPreviewId(course.preview)}>
 									<IoEyeOutline />
 								</button>

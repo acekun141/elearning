@@ -23,7 +23,7 @@ const CommentItem = ({ comment, onDelete }) => {
   return (
     <div className="comment-item">
       <div className="comment-item__avatar">
-        {comment.user.avatar && <img src={`/image/${comment.user.avatar}`} alt="avatar" />}
+        {comment.user.avatar && <img src={`/api/image/${comment.user.avatar}`} alt="avatar" />}
       </div>
       <div className="comment-item__content">
         <div className="box-message">

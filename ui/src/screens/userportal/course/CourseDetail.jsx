@@ -85,7 +85,7 @@ const CourseDetail = () => {
               </div>
             ) : (
               <div className="cover-wrapper">
-                <img src={`/image/${data.cover}`} alt="cover-image" />
+                <img src={`/api/image/${data.cover}`} alt="cover-image" />
                 <p>{data.name}</p>
               </div>
             )
@@ -106,7 +106,7 @@ const CourseDetail = () => {
             <div className="teacher mb-5">
               <h4 style={{ fontWeight: 700 }}>Teacher</h4>
               <div className="teacher__info">
-                <img src={`/image/${data.user_avatar}`} alt="avatar" />
+                <img src={`/api/image/${data.user_avatar}`} alt="avatar" />
                 <p classname="course-item__user">{data.create_by}</p>
               </div>
               <p className="mt-4">{data.user_describe}</p>
@@ -131,7 +131,7 @@ const CourseDetail = () => {
             <p>{`(0 rate)`}</p>
           </div>
           <div className="course-detail__user" onClick={() => goTeacherDetail(data.create_by_id)}>
-            <img src={`/image/${data.user_avatar}`} alt="avatar" />
+            <img src={`/api/image/${data.user_avatar}`} alt="avatar" />
             <p className="course-item__user">{data.create_by}</p>
           </div>
           {data.price - data.discount === 0

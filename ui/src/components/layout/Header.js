@@ -51,7 +51,7 @@ const Header = () => {
         {user ? (
           <Fragment>
             <button className="header-user" onClick={handleShowTab}>
-              {user.avatar ? <img src={`/image/${user.avatar}`} alt="avatar" /> : <div className="short-name">{userShortName()}</div>}
+              {user.avatar ? <img src={`/api/image/${user.avatar}`} alt="avatar" /> : <div className="short-name">{userShortName()}</div>}
               <strong>{user.first_name} {user.last_name}</strong>
               <div className="header-user__tab" ref={tabRef} hidden={!isShowTab}>
                 <Link to="/user/settings">

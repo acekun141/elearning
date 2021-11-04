@@ -23,7 +23,7 @@ const CommentInput = ({ courseId, onComment }) => {
 
   return (
     <form onSubmit={onSubmit} className="comment-input p-0 mb-5">
-      {user.avatar ? <img src={`/image/${user.avatar}`} alt="avatar" /> : <div className="short-name">{shortName}</div>}
+      {user.avatar ? <img src={`/api/image/${user.avatar}`} alt="avatar" /> : <div className="short-name">{shortName}</div>}
       <input placeholder="Write a comment" value={content} onChange={event => setContent(event.target.value)} />
       <button type="submit" disabled={!content} hidden={true} />
     </form>

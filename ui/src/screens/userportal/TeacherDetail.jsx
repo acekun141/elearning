@@ -62,7 +62,7 @@ const TeacherDetail = () => {
         <div className="teacher-detail">
           <div className="user-info">
             <div className="user-info__avatar">
-              <img src={`/image/${detail.avatar}`} alt="avatar" />
+              <img src={`/api/image/${detail.avatar}`} alt="avatar" />
             </div>
             <p>{detail.first_name} {detail.last_name}</p>
           </div>

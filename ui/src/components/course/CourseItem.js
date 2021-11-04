@@ -28,7 +28,7 @@ const CourseItem = ({ item, isAdmin }) => {
   return (
     <div className="course-item">
       <div className="course-item__cover-wrapper">
-        <img src={`/image/${item.cover}`} alt="cover" />
+        <img src={`/api/image/${item.cover}`} alt="cover" />
       </div>
       <div className="course-item__content">
         <p className="course-item__name" onClick={() => goToCourse(item.id)}>{item.name}</p>
@@ -38,7 +38,7 @@ const CourseItem = ({ item, isAdmin }) => {
           <p>{`(${item.rate_detail['total']} rate${item.rate_detail['total'] > 1 ? 's' : ''})`}</p>
         </div>
         <div className="course-item__user" onClick={() => goTeacherDetail(item.create_by_id)}>
-          <img src={`/image/${item.user_avatar}`} alt="avatar" />
+          <img src={`/api/image/${item.user_avatar}`} alt="avatar" />
           <p className="course-item__user">{item.create_by}</p>
         </div>
         <div className="course-item__price">
