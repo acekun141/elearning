@@ -27,20 +27,21 @@ def token_require(func):
             token = request.headers['x-access-token']
             payload, error = check_token(token)
             if error:
-                print(error)
-                return "", 401
+                print("co error", error)
+                return "co error", 401
             try:
                 user = UserInfo.query.filter_by(id=payload['user_id']).first()
-                print(error)
                 if not user:
-                    return "", 401
+                    print("khong thay user")
+                    return "khong thay user", 401
                 if user.deactivate:
-                    return "", 401
+                    print("Deactivate roi")
+                    return "Deactivate roi", 401
                 return func(user=user, *args, **kwargs)
             except Exception as err:
-                print(err)
-                return "", 401
-        return "", 401
+                print("Exception", err)
+                return "Exception", 401
+        return "ko co token", 401
     return wrapper
 
 def valid_role(list_role):
