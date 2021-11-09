@@ -21,4 +21,4 @@ RUN npm install -g serve --silent
 
 RUN yarn build
 
-CMD serve -s build
+CMD serve -s build -l 5000
