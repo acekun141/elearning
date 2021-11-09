@@ -3,6 +3,7 @@ WORKDIR /code
 
 ADD main.py config.py requirement.txt wait.sh start.sh /code/
 ADD api /code/api/
+ADD migrations /code/migrations
 
 RUN mkdir videos
 RUN mkdir images
