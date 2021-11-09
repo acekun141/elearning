@@ -10,7 +10,7 @@
 ### Các bước
 
 **Chuẩn bị:**
-Thay đổi hết các url `https://leeminhung.space` trong project thành tên host của mình (Nếu chạy local thì là localhost:8000)
+Thay đổi hết các url `https://leeminhung.space` trong project thành tên host của mình (Nếu chạy local thì là localhost)
 *Do em lỡ dùng url nhiều quá ngại đổi thành environment*
 
 **Bước 1:**
